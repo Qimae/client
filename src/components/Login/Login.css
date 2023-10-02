@@ -1,0 +1,13 @@
+.Login {
+    width: 70%;
+    margin: auto;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 70vh;
+
+}
+
+.Login input {
+    width:100%;
+    margin-bottom: 2rem;
+}
