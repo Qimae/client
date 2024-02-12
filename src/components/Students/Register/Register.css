@@ -1,0 +1,106 @@
+.stu-register-container {
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    color: #4a5562;
+
+}
+
+.stu-register-title {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+}
+
+.stu-register-title .stu-register-title-text {
+    flex: 60%;
+}
+
+.stu-register-title .stu-register-title-text h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.stu-register-title .stu-register-title-for {
+    flex: 40%;
+}
+
+.stu-register-title .stu-register-title-for h2 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.stu-register-container label {
+    font-size: .875rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+
+}
+
+.stu-register-container input {
+    width: 100%;
+    border: 1px solid #cbcbcd;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: .375em;
+    margin-bottom: 1rem;
+}
+.stu-register-container input:focus{
+    outline: 1px solid #fc8250;
+
+}
+/* responsivenes */
+@media screen and (min-width: 1080px) {
+    .stu-register-container {
+        width: 50%;
+        margin: auto;
+        padding: 8rem;
+        color: #4a5562;
+
+    }
+
+    .stu-register-title {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 1rem;
+    }
+
+    .stu-register-title .stu-register-title-text {
+        flex: 70%;
+    }
+
+    .stu-register-title .stu-register-title-text h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+    }
+
+    .stu-register-title .stu-register-title-for {
+        flex: 30%;
+    }
+
+    .stu-register-title .stu-register-title-for h2 {
+        font-size: 1.125rem;
+        font-weight: 500;
+        padding-top: .5rem;
+    }
+
+    .stu-register-container label {
+        font-size: .875rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+
+    }
+
+    .stu-register-container input {
+        width: 100%;
+        border: 1px solid #cbcbcd;
+        margin-top: 1rem;
+        padding: .5rem;
+        border-radius: .375em;
+        margin-bottom: 1rem;
+    }
+    .stu-register-container input:focus{
+        outline: 1px solid #fc8250;
+
+    }
+}

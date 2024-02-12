@@ -1,0 +1,148 @@
+.ch-flex {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    padding: 1rem;
+    color: #4a5562;
+}
+
+.ch-flex .ch-text .ch-text-signin p a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #fc8250;
+    border: none;
+}
+
+.ch-flex .ch-text .ch-text-signin p a:hover {
+    border: none;
+    background: white;
+}
+
+.ch-flex a {
+    text-decoration: none;
+    color: #4a5562;
+    border: 1px solid #d1d5db;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.ch-flex a:hover {
+    border: 1px solid #fc8250;
+    background: #d3fae166;
+}
+
+.ch-flex h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.ch-flex h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.ch-flex p {
+    font-size: 0.875rem;
+}
+
+.ch-flex .ch-links {
+    flex: 100%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.ch-flex .ch-text {
+    flex: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.ch-flex .ch-text .ch-text-h1 {
+    flex: 70%;
+}
+
+.ch-flex .ch-text .ch-text-signin {
+    text-align: right;
+    flex: 30%;
+}
+
+
+
+
+/* responsivenes */
+@media screen and (min-width: 1080px) {
+    .ch-flex {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 50%;
+        padding: 8rem;
+        color: #4a5562;
+    }
+
+    .ch-flex .ch-text .ch-text-signin p a {
+        text-decoration: none;
+        color: #fc8250;
+        border: none;
+        font-weight: 600;
+    }
+
+    .ch-flex .ch-text .ch-text-signin p a:hover {
+        border: none;
+        background: white;
+    }
+
+    .ch-flex a {
+        text-decoration: none;
+        color: #4a5562;
+        border: 1px solid #d1d5db;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .ch-flex a:hover {
+        border: 1px solid #fc8250;
+        background: #fad8ca70;
+    }
+
+    .ch-flex h1 {
+        font-size: 1.875rem;
+        font-weight: 600;
+    }
+
+    .ch-flex h2 {
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+
+    .ch-flex p {
+        font-size: 0.875rem;
+    }
+
+    .ch-flex .ch-links {
+        flex: 100%;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    .ch-flex .ch-text {
+        flex: 100%;
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ch-flex .ch-text .ch-text-h1 {
+        flex: 80%;
+    }
+
+    .ch-flex .ch-text .ch-text-signin {
+        text-align: right;
+        flex: 20%;
+        padding-top: .5rem;
+    }
+
+
+}

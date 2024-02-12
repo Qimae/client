@@ -1,0 +1,366 @@
+/* mobile */
+
+* {
+    font-family: Lexend, sans-serif;
+}
+
+/* navigation */
+.me-auto {
+    margin-left: 0rem;
+}
+
+/* header */
+.h-flex {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.h-flex .h-text-advert {
+    flex: 100%;
+    padding: 1rem;
+    margin-bottom: 20px;
+
+}
+
+.h-button {
+    padding: .5rem;
+    background: #fc8250;
+    border: none;
+    border-radius: .375em;
+    color: white;
+}
+
+
+.h-flex .h-text-img {
+    flex: 100%;
+    background-image: url("./assets/kidsbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.h-flex .h-text-advert h1 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.h-flex .h-text-advert h1 span {
+    position: relative;
+    display: inline-block;
+    color: #fc8250;
+}
+
+.h-flex .h-text-advert h1 span::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fc8250;
+    transform: skewX(-30deg);
+}
+
+.h-flex .h-text-advert p {
+    padding-bottom: 2rem;
+    color: grey;
+
+}
+
+/* Features */
+.f-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.f-flex .f-title {
+    flex: 100%;
+    padding: 1rem;
+}
+
+.f-flex .f-title h1 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.f-img {
+    height: 100vh;
+    flex: 100%;
+
+}
+
+.f-img img {
+    height: 100%;
+}
+
+/* FAQ */
+
+#FAQ {
+    padding: 1.5rem;
+}
+
+.fq-content h1 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+#accordion {
+    --bs-accordion-bg: #fc8250;
+
+}
+
+.accordion-body {
+    background-color: white;
+}
+
+/* tutorial */
+.t-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.t-flex .t-paragraph {
+    flex: 100%;
+    margin: 10px;
+
+}
+
+.t-flex .t-video {
+    height: 100%;
+    flex: 100%;
+    margin: 10px;
+
+
+}
+
+/* Footer */
+#Footer {
+    height: 20vh;
+    border-top: 1px solid #fc8250;
+    background-color: white;
+    padding: 2rem;
+}
+
+.ft-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.ft-links .ft-copy {
+    flex: 100%;
+}
+
+.ft-links .ft-copy span {
+    color: #fc8250;
+}
+
+.ft-links .ft-social {
+    flex: 100%;
+    text-align: center;
+
+}
+
+.ft-links .ft-social a {
+    font-size: 2rem;
+    color: #fc8250;
+    margin-right: 1rem;
+}
+
+/* responsivenes */
+@media screen and (min-width: 1080px) {
+    * {
+        font-family: Lexend, sans-serif;
+    }
+
+    /* navigation */
+    .me-auto {
+        margin-left: 10rem;
+    }
+
+    #btn-primary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #fc8250;
+        --bs-btn-border-color: #fc8250;
+    }
+
+    #btn-primary:hover {
+        color: #fc8250;
+        border: 1px solid #fc8250;
+        background: white;
+    }
+
+    /* header */
+
+    .h-flex {
+        flex-direction: row;
+        padding: 3rem;
+    }
+
+    .h-flex .h-text-advert {
+        flex: 50%;
+        margin: 20px;
+
+    }
+
+    .h-flex .h-text-img {
+        flex: 50%;
+        margin: 20px;
+        background-image: url("./assets/kidsbg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .h-flex .h-text-advert h1 {
+        font-size: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .h-flex .h-text-advert h1 span {
+        position: relative;
+        display: inline-block;
+        color: #fc8250;
+    }
+
+    .h-flex .h-text-advert h1 span::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fc8250;
+        transform: skewX(-30deg);
+    }
+
+    .h-flex .h-text-advert p {
+        padding-bottom: 2rem;
+        color: grey;
+
+    }
+
+    .h-button {
+        padding: .5rem;
+        background: #fc8250;
+        border: none;
+        border-radius: .375em;
+        color: white;
+    }
+
+    .h-button:hover {
+        color: #fc8250;
+        border: 1px solid #fc8250;
+        background: white;
+    }
+
+    /* Features */
+    .f-flex {
+        display: flex;
+        flex-direction: row;
+        padding: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .f-flex .f-title {
+        flex: 50%;
+        padding: 1rem;
+    }
+
+    .f-flex .f-title h1 {
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .f-img {
+        height: 80vh;
+        flex: 50%;
+
+    }
+
+    .f-img img {
+        height: 100%;
+    }
+
+    /* FAQ */
+
+    #FAQ {
+        padding: 3rem;
+    }
+
+    .fq-content h1 {
+        font-size: 3rem;
+        padding-bottom: 2rem;
+
+    }
+
+    #accordion {
+        --bs-accordion-bg: #fc8250;
+
+    }
+
+    .accordion-body {
+        background-color: white;
+    }
+
+    /* tutorial */
+    .t-flex {
+        display: flex;
+        flex-direction: row;
+        padding: 3rem;
+    }
+
+    .t-flex .t-paragraph {
+        flex: 50%;
+        margin: 10px;
+
+    }
+
+    .t-flex .t-video {
+        margin: 10px;
+    }
+
+    .t-flex .t-video iframe {
+        height: 50vh;
+    }
+
+    /* Footer */
+    #Footer {
+        height: 15vh;
+        border-top: 1px solid #fc8250;
+        background-color: white;
+        padding: 3rem;
+    }
+
+    .ft-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ft-links .ft-copy {
+        flex: 100%;
+    }
+
+    .ft-links .ft-social {
+        flex: 100%;
+        text-align: right;
+    }
+
+    .ft-links .ft-social a {
+        font-size: 2rem;
+        color: #fc8250;
+        margin-right: 1rem;
+    }
+
+    .ft-links .ft-copy span {
+        color: #fc8250;
+    }
+}

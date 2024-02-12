@@ -1,13 +1,170 @@
-.Login {
-    width: 70%;
+#Login {
+    background-image: url("../../assets/logingirl.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.log-flex {
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    padding: 2.25rem;
+}
+
+.log-flex .log-logo {
+    max-width: 24rem;
     margin: auto;
-    padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: 70vh;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+}
+
+.log-flex .log-form {
+    max-width: 24rem;
+    margin: auto;
+    color: rgb(75 85 99);
+}
+
+.log-flex .log-form p a {
+    text-decoration: none;
+    color: #fc8250;
+    font-weight: 500;
+}
+
+.log-flex .log-form h2 {
+    font-size: 2.25rem;
+    padding-bottom: 2rem;
+    font-weight: 600;
+    color: #0f0246;
+}
+
+.log-flex .log-form label {
+    font-weight: 600;
+    font-size: .875rem;
+}
+
+.log-flex .log-form input {
+    width: 100%;
+    border: 1px solid #cbcbcd;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: .375em;
+    margin-bottom: 1rem;
+}
+
+.log-flex .log-form input:focus {
+    outline: 1px solid #fc8250;
 
 }
 
-.Login input {
-    width:100%;
-    margin-bottom: 2rem;
+::placeholder {
+    font-size: .875rem;
+}
+
+.l-button {
+    padding: .5rem;
+    background: #fc8250;
+    border: none;
+    border-radius: .375em;
+    color: white;
+    width: 100%;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.l-button:hover {
+    color: #fc8250;
+    border: 1px solid #fc8250;
+    background: white;
+}
+
+/* responsivenes */
+@media screen and (min-width: 1080px) {
+
+    #Login {
+        background-image: url("../../assets/logingirl.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .log-flex {
+        width: 50%;
+        height: 100vh;
+        background-color: aliceblue;
+    }
+
+    .log-flex .log-logo {
+        max-width: 24rem;
+        margin: auto;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    .log-flex .log-form {
+        max-width: 24rem;
+        margin: auto;
+        color: rgb(75 85 99);
+    }
+
+    .log-flex .log-form p a {
+        text-decoration: none;
+        color: #fc8250;
+        font-weight: 500;
+        opacity: .8;
+    }
+
+    .log-flex .log-form p a:hover {
+        opacity: 1;
+        text-decoration: underline;
+
+    }
+
+    .log-flex .log-form h2 {
+        font-size: 2.25rem;
+        padding-bottom: 2rem;
+        font-weight: 600;
+        color: #0f0246;
+    }
+
+    .log-flex .log-form label {
+        font-weight: 600;
+        font-size: .875rem;
+    }
+
+    .log-flex .log-form input {
+        width: 100%;
+        border: 1px solid #cbcbcd;
+        margin-top: 1rem;
+        padding: .5rem;
+        border-radius: .375em;
+        margin-bottom: 1rem;
+    }
+
+    .log-flex .log-form input:focus {
+        outline: 1px solid #fc8250;
+
+    }
+
+    ::placeholder {
+        font-size: .875rem;
+    }
+
+    .l-button {
+        padding: .5rem;
+        background: #fc8250;
+        border: none;
+        border-radius: .375em;
+        color: white;
+        width: 100%;
+        font-weight: 600;
+        margin-bottom: 3rem;
+    }
+
+    .l-button:hover {
+        color: #fc8250;
+        border: 1px solid #fc8250;
+        background: white;
+    }
+
 }
