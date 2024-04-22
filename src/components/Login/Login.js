@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import edulogo from "../../assets/edulogo.png";
 import { LuAsterisk } from "react-icons/lu";
+import axios from "axios";
 
-const Login = () => {
+const Login = ({setLoggedIn}) => {
   const history = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
+    account: "",
     password: "",
   });
   const [error, setError] = useState(null);
@@ -17,29 +19,26 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  axios.defaults.withCredentials = true;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch("http://localhost:3000/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        setError(errorData.error);
-        return;
-      }
-
-      const data = await response.json();
-      document.cookie = `token=${data.token}; path=/`;
-      history("/welcome");
-    } catch (error) {
-      console.error("Error during login:", error);
+    if (formData.account === "School") {    
+      axios
+        .post("http://localhost:3002/schoolLogin", formData)
+        .then((res) => {
+          if (res.data.Status === "Success") {
+            setLoggedIn(res.data.user);
+            /* const id = res.data.id; */
+            localStorage.setItem("valid", true);
+            history("/schooldashboard");
+          } else {
+            setError(res.data.Error);
+          }
+        })
+        .catch((err) => console.log(err));
+    } else {
+      setError("Invalid Account Type!");
     }
   };
 

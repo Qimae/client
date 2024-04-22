@@ -4,39 +4,37 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import edulogo from "../../../assets/edulogo.png";
 import { LuAsterisk } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const SchoolRegister = () => {
-  const [formData, setFormData] = useState({
-    fullname: "",
-    email: "",
-    password: "",
-  });
+  const [fullname, setFullname] = useState("");
+  const [schoolcode, setSchoolcode] = useState("");
+  const [department, setDepartment] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [cpassword, setCpassword] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
   const [error, setError] = useState(null);
-
+  const history = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch("http://localhost:3000/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (!response.ok) {
-        const errorData = await response.json();
-        setError(errorData.error);
-        return;
+    if (password === cpassword) {
+      try {
+        const response = await axios.post("http://localhost:3002/register", {
+          fullname,
+          schoolcode,
+          department,
+          email,
+          password,
+        });
+        console.log(response.data);
+        history("/login");
+      } catch (error) {
+        console.error(error.response.data.error);
       }
-      const data = await response.json();
-      console.log(data); // Handle the response accordingly (e.g., show success message or error)
-    } catch (error) {
-      console.error("Error during registration:", error);
+    } else {
+      setError("Passwords Do not Match!");
     }
   };
 
@@ -61,7 +59,7 @@ const SchoolRegister = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="fullname">
-            Full Name as Per ID Number
+            Full Name
             <LuAsterisk style={{ color: "red" }} />
           </label>
           <br />
@@ -69,23 +67,23 @@ const SchoolRegister = () => {
             type="text"
             id="fullname"
             name="fullname"
-            value={formData.fullname}
-            onChange={handleChange}
+            value={fullname}
+            onChange={(e) => setFullname(e.target.value)}
             required
           />
           <br />
 
-          <label htmlFor="mcode">
+          <label htmlFor="schoolcode">
             School Code
             <LuAsterisk style={{ color: "red" }} />
           </label>
           <br />
           <input
             type="text"
-            id="mcode"
-            name="mcode"
-            value={formData.mcode}
-            onChange={handleChange}
+            id="schoolcode"
+            name="schoolcode"
+            value={schoolcode}
+            onChange={(e) => setSchoolcode(e.target.value)}
             required
           />
           <br />
@@ -99,8 +97,8 @@ const SchoolRegister = () => {
             type="text"
             id="department"
             name="department"
-            value={formData.department}
-            onChange={handleChange}
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
             required
           />
           <br />
@@ -114,8 +112,8 @@ const SchoolRegister = () => {
             type="text"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <br />
@@ -129,8 +127,8 @@ const SchoolRegister = () => {
             type="password"
             id="password"
             name="password"
-            value={formData.password}
-            onChange={handleChange}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
           <br />
@@ -143,14 +141,16 @@ const SchoolRegister = () => {
             type="password"
             id="cpassword"
             name="cpassword"
-            value={formData.cpassword}
-            onChange={handleChange}
+            value={cpassword}
+            onChange={(e) => setCpassword(e.target.value)}
             required
           />
           <br />
           <br />
           {error && <div style={{ color: "red" }}>{error}</div>}
-          <button className="l-button" type="submit">Register</button>
+          <button className="l-button" type="submit">
+            Register
+          </button>
         </form>
       </div>
     </div>
